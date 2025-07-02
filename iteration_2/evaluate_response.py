@@ -10,7 +10,6 @@ class DomainResponseEvaluator:
     
     def __init__(self):
         api_key = userdata.get('OPENAI_API_KEY')
-        os.environ['OPENAI_API_KEY'] = api_key
         self.client = openai.OpenAI(api_key=api_key)
     
     def calculate_average_score(self, scores):
